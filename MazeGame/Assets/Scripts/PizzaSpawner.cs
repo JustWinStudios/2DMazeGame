@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PizzaSpawner : MonoBehaviour
 {
+    public static PizzaSpawner instance;
+
     public GameObject pizzPrefab;
     public LayerMask wallLayer; // Assign the Wall layer in the inspector
     public float spawnInterval = 5f; // Time between spawns
