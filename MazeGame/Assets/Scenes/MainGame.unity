@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 975768112}
   - component: {fileID: 975768114}
   - component: {fileID: 975768113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap_Foundation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 1839036854}
   - component: {fileID: 1839036857}
   - component: {fileID: 1839036856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tilemap_Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
