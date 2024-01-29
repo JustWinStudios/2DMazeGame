@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class InstructionsManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject instructionsPanel; // Assign in Inspector
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleInstructions()
     {
-        
+        instructionsPanel.SetActive(!instructionsPanel.activeSelf);
     }
 }
