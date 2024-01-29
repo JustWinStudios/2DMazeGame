@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    private int pizzasCollected = 0;
+    public int pizzasCollected = 0;
     private int pizzasToCollect;
 
     void Awake()
