@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
     private int pizzasCollected = 0;
-    private int pizzasToCollect = Random.Range(10, 16);
+    private int pizzasToCollect;
 
     void Awake()
     {
@@ -27,6 +28,11 @@ public class GameManager : MonoBehaviour
     {
         pizzasCollected += amount;
         CheckLevelCompletion();
+    }
+
+    void InitializeLevel()
+    {
+
     }
 
     void CheckLevelCompletion()
