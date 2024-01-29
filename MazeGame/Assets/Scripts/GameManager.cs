@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        InitializeLevel(); // Initialize level settings
     }
 
     public void CollectPizza(int amount)
@@ -32,24 +34,24 @@ public class GameManager : MonoBehaviour
 
     void InitializeLevel()
     {
-
+        pizzasCollected = 0;
+        pizzasToCollect = Random.Range(10, 16);
     }
 
-    void CheckLevelCompletion()
+    void CheckLevelCompletion() // Call LevelCompleted when enough pizzas are collected
     {
         if (pizzasCollected >= pizzasToCollect)
-        {
-            //Load next level or Scene
-            LoadNextLevel();
+        { 
+            LoadNextLevel(); // Load next level or Scene
         }
     }
 
     void LoadNextLevel()
     {
-        pizzasCollected = 0;
-        pizzasToCollect = Random.Range(10, 16);
-
         // Organize the scenes based on how you want to progress the maps
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        // Reinitialize level variables for the new level
+        InitializeLevel();
     }
 }
