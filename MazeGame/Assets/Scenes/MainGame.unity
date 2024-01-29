@@ -655,7 +655,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 8
-  spawnInterval: 5
+  spawnInterval: 3
   mapSize: {x: 15, y: 7.5}
 --- !u!4 &1773155532
 Transform:
