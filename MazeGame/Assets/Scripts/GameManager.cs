@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int pizzasCollected = 0;
     private int pizzasToCollect;
 
+    public Text pizzaCountText; // Reference the UI in the inspector
+
     void Awake()
     {
         if (instance == null)
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
     public void CollectPizza(int amount)
     {
         pizzasCollected += amount;
+        pizzaCountText.text = "Pizzas: " + pizzasCollected; // Updates the UI text
+
         CheckLevelCompletion();
     }
 
