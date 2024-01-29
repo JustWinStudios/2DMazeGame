@@ -6,7 +6,7 @@ public class PizzaSpawner : MonoBehaviour
 {
     public static PizzaSpawner instance;
 
-    public GameObject pizzPrefab;
+    public GameObject pizzaPrefab;
     public LayerMask wallLayer; // Assign the Wall layer in the inspector
     public float spawnInterval = 5f; // Time between spawns
     public Vector2 mapSize = new Vector2(20, 20); // Predefines the map's size, adjust based on map size
@@ -17,12 +17,12 @@ public class PizzaSpawner : MonoBehaviour
     {
         if (instance == null)
         {
-            instance == null;
+            instance = this;
 
             DontDestroyOnLoad(gameObject);
         }
 
-        else if (instance != null)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -30,7 +30,7 @@ public class PizzaSpawner : MonoBehaviour
 
     void Update()
     {
-        timer += timer.deltaTime;
+        timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
         {
