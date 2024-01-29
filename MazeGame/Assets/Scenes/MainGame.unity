@@ -652,7 +652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pizzaPrefab: {fileID: 7308405639297799217, guid: a1b139c30c59f1141a1df51437d60f95, type: 3}
-  wallLayer:
+  stopLayer:
     serializedVersion: 2
     m_Bits: 8
   spawnInterval: 3

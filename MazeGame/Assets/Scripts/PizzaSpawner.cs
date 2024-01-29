@@ -7,7 +7,7 @@ public class PizzaSpawner : MonoBehaviour
     public static PizzaSpawner instance;
 
     public GameObject pizzaPrefab;
-    public LayerMask wallLayer; // Assign the Wall layer in the inspector
+    public LayerMask stopLayer; // Assign the Wall layer in the inspector
     public float spawnInterval = 5f; // Time between spawns
     public Vector2 mapSize = new Vector2(20, 20); // Predefines the map's size, adjust based on map size
 
@@ -54,7 +54,7 @@ public class PizzaSpawner : MonoBehaviour
             spawnPoint = new Vector2(x, y);
 
             // Check if the spawn point is in a wall
-            if (!Physics2D.OverlapCircle(spawnPoint, 0.5f, wallLayer))
+            if (!Physics2D.OverlapCircle(spawnPoint, 0.5f, stopLayer))
             {
                 validPosition = true;
                 break;
